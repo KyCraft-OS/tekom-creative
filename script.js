@@ -14,6 +14,13 @@ window.closeRailsModal = function () {
     document.getElementById("railsModal").style.display = "none";
 };
 
+window.openNirantaModal = function () {
+    document.getElementById("nirantaModal").style.display = "flex";
+};
+
+window.closeNirantaModal = function () {
+    document.getElementById("nirantaModal").style.display = "none";
+};
 
 // Web Design
 document.querySelectorAll(".portfolio-card")[0].addEventListener("click", openPortfolio);

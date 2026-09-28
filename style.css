@@ -65,12 +65,12 @@ body {
 /* ==================== */
 
 .hero {
-    min-height: 75vh;
+    min-height: 65vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 80px 8%;
+    padding: 60px 8%;
 }
 
 .hero-content {
@@ -126,75 +126,121 @@ body {
     border: 1px solid var(--secondary);
     color: var(--secondary);
 }
-/* ==================== */
-/* Services Section */
-/* ==================== */
 
-.services {
-    padding: 100px 8%;
-    background-color: var(--section-bg);
-}
+/* =====================
+   Service Header
+===================== */
 
 .section-header {
-    max-width: 700px;
-    margin: 0 auto 50px;
+    max-width: 1100px;
+    margin: 0 auto;
     text-align: center;
 }
 
-.section-label {
-    font-size: 13px;
-    font-weight: bold;
-    letter-spacing: 3px;
-    margin-bottom: 15px;
-}
-
 .section-header h2 {
-    font-size: 42px;
-    line-height: 1.2;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
-.section-header h2 span {
-    display: block;
-}
-
-.section-description {
-    color: #666666;
-    font-size: 17px;
-    line-height: 1.6;
-}
-
-.service-cards {
-    max-width: 1100px;
+.section-header .section-description {
+    max-width: 600px;
     margin: 0 auto;
+}
+
+/* =========================
+   Service Categories
+========================= */
+
+.service-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+    max-width: 1100px;
+    margin: 50px auto 0;
+}
+
+.service-category > h3 {
+    font-size: 21px;
+    margin: 0 0 18px;
+    text-align: left;
+}
+
+.service-packages {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+    gap: 22px;
 }
 
-.service-card {
-    background-color: #ffffff;
-    padding: 35px;
-    border: 1px solid #e5e5e5;
-    border-radius: 12px;
+.service-package {
+    background: #ffffff;
+    border: 1px solid #e4e4e4;
+    border-radius: 10px;
+    padding: 25px;
 }
 
-.service-number {
+.service-package h4 {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.service-package p {
     font-size: 14px;
-    color: var(--primary);
-    margin-bottom: 30px;
-}
-
-.service-card h3 {
-    font-size: 22px;
-    margin-bottom: 15px;
-}
-
-.service-card p {
-    color: #666666;
-    font-size: 15px;
     line-height: 1.6;
+    color: #666666;
+    margin-bottom: 18px;
 }
+
+.skill-label {
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.skill-list span {
+    display: inline-block;
+    padding: 6px 9px;
+    background: #f1f7f4;
+    border: 1px solid #dcebe5;
+    border-radius: 6px;
+    font-size: 12px;
+    color: #087F5B;
+}
+
+@media (max-width: 768px) {
+    .service-packages {
+        grid-template-columns: 1fr;
+    }
+    
+
+    .service-category > h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .service-packages {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .service-package {
+        padding: 20px;
+    }
+
+    .service-package h4 {
+        font-size: 17px;
+    }
+
+    .service-package p {
+        font-size: 14px;
+    }
+}
+
 /* ==================== */
 /* Portfolio Section */
 /* ==================== */
@@ -684,4 +730,159 @@ html {
     .rails-modal-info .contact-button {
         margin-top: 8px;
     }
+}
+
+/* Niranta Modal */
+.niranta-modal-content {
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: 1fr 0.75fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.niranta-modal-content > img {
+    width: 100%;
+    height: auto;
+    max-height: 75vh;
+    object-fit: contain;
+    border-radius: 8px;
+    margin: 0;
+}
+
+.niranta-modal-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 0;
+}
+
+.niranta-modal-info h2 {
+    font-size: 28px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.niranta-modal-info h3 {
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+.niranta-modal-info p {
+    margin-bottom: 12px;
+}
+
+.niranta-modal-info .contact-button {
+    display: inline-block;
+    width: fit-content;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .niranta-modal-content {
+        grid-template-columns: 1fr;
+        width: 94%;
+        max-width: 500px;
+        max-height: 88vh;
+        overflow-y: auto;
+        gap: 18px;
+        padding: 18px;
+    }
+
+    .niranta-modal-content > img {
+        width: 100%;
+        height: auto;
+        max-height: none;
+        object-fit: contain;
+    }
+
+    .niranta-modal-info h2 {
+        font-size: 23px;
+        line-height: 1.2;
+        margin-bottom: 15px;
+    }
+
+    .niranta-modal-info h3 {
+        font-size: 17px;
+        margin-top: 12px;
+    }
+
+    .niranta-modal-info p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .niranta-modal-info .contact-button {
+        margin-top: 8px;
+    }
+}
+
+/* Meta Bin Go Modal */
+#metaBinGoModal .meta-bin-go-modal-content {
+    width: 90%;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.75fr;
+    gap: 32px;
+    align-items: center;
+    padding: 30px;
+}
+
+#metaBinGoModal .meta-bin-go-modal-content > img {
+    width: 100%;
+    height: auto;
+    max-height: 70vh;
+    object-fit: contain;
+    border-radius: 8px;
+    margin: 0;
+}
+
+#metaBinGoModal .meta-bin-go-modal-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 0;
+}
+
+@media (max-width: 768px) {
+
+    #metaBinGoModal .meta-bin-go-modal-content {
+        width: 94%;
+        max-width: 500px;
+        max-height: 88vh;
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 18px;
+        overflow-y: auto;
+    }
+
+    #metaBinGoModal .meta-bin-go-modal-content > img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        max-height: none;
+        object-fit: contain;
+    }
+
+    #metaBinGoModal .meta-bin-go-modal-info {
+        width: 100%;
+    }
+
+    #metaBinGoModal .meta-bin-go-modal-info h2 {
+        font-size: 23px;
+        line-height: 1.2;
+        margin-bottom: 15px;
+    }
+
+    #metaBinGoModal .meta-bin-go-modal-info h3 {
+        font-size: 17px;
+        margin-top: 12px;
+    }
+
+    #metaBinGoModal .meta-bin-go-modal-info p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
 }

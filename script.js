@@ -14,12 +14,12 @@ window.closeRailsModal = function () {
     document.getElementById("railsModal").style.display = "none";
 };
 
-window.openNirantaModal = function () {
-    document.getElementById("nirantaModal").style.display = "flex";
+window.openMetaBinGoModal = function () {
+    document.getElementById("metaBinGoModal").style.display = "flex";
 };
 
-window.closeNirantaModal = function () {
-    document.getElementById("nirantaModal").style.display = "none";
+window.closeMetaBinGoModal = function () {
+    document.getElementById("metaBinGoModal").style.display = "none";
 };
 
 // Web Design
@@ -29,11 +29,14 @@ document.querySelectorAll(".portfolio-card")[0].addEventListener("click", openPo
 // RAILS / Microcontroller
 document.querySelectorAll(".portfolio-card")[1].addEventListener("click", openRailsModal);
 
+document.querySelectorAll(".portfolio-card")[2].addEventListener("click", openMetaBinGoModal);
+
 
 // Tutup modal dengan tombol Escape
 document.addEventListener("keydown", function (event) {
     if (event.key === "Escape") {
         closePortfolio();
         closeRailsModal();
+        closeMetaBinGoModal();
     }
 });
